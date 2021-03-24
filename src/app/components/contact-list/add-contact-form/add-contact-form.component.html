@@ -1,0 +1,26 @@
+<button class="add-contact" *ngIf="!isShowForm" (click) ="showForm()">Добавить новый контакт</button>
+
+<form action="" *ngIf="isShowForm" [formGroup]="addContactForm">
+  <div class="form__body">
+    <div class="form__group">
+      <label>Имя контакта</label>
+      <input type="text"
+             placeholder="Имя"
+             formControlName="name"
+      >
+    </div>
+    <div class="form__group">
+      <label>Телефон</label>
+      <input type="text"
+             placeholder="Телефон"
+             formControlName="phone"
+      >
+    </div>
+    <div class="form__footer">
+      <button type="submit"
+              class="btn"
+              [disabled]="!addContactForm.valid"
+              (click)="onSubmit()">Создать контакт</button>
+    </div>
+  </div>
+</form>

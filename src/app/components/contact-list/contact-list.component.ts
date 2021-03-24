@@ -9,15 +9,11 @@ import {Contact} from '../../models/contact.module';
 export class ContactListComponent {
 
   public contacts: Contact[] =  [
-    {
-      name: 'Иванов Иван',
-      phone: '123456789'
-    },
-    {
-      name: 'Алексеев Алексей',
-      phone: '012345678'
-    }
+    new Contact('Иванов Иван', '123456789'),
+    new Contact('Алексеев Алексей', '987654321')
   ];
 
-
+  public addContact(contact: Contact): void {
+    this.contacts.push(contact);
+  }
 }
