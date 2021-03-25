@@ -22,9 +22,9 @@ export class AddContactFormComponent implements OnInit{
   }
 
   onSubmit(): void {
-    let name = this.addContactForm.value.name;
-    let phone = this.addContactForm.value.phone;
-    let contact = new Contact(name, phone);
+    const name = this.addContactForm.value.name;
+    const phone = this.addContactForm.value.phone;
+    const contact = new Contact(name, phone);
     this.addContact.emit(contact);
     this.addContactForm.reset();
     this.isShowForm = false;
