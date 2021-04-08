@@ -8,6 +8,7 @@ import {ContactsService} from '../../services/contacts.service';
   styleUrls: ['./contact-list.component.css']
 })
 export class ContactListComponent implements OnInit {
+  public selectedContact: Contact;
   public contacts: Contact[] =  [];
   public isFiltered = false;
 
@@ -41,5 +42,8 @@ export class ContactListComponent implements OnInit {
   }
   public updateContacts(): void {
     this.contacts = this.contactsService.updateContacts();
+  }
+  public onSelect(contact: Contact): void {
+    this.selectedContact = contact;
   }
 }
