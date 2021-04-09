@@ -1,0 +1,11 @@
+<div *ngIf="contact">
+  {{contact.name}} <span>тел: </span>{{contact.phone}}
+  <div>
+    <label for="contact-name">Имя контакта: </label>
+    <input id="contact-name" [(ngModel)]="contact.name" placeholder="name">
+  </div>
+  <div>
+    <label for="contact-phone">Телефон: </label>
+    <input id="contact-phone" [(ngModel)]="contact.phone" placeholder="phone">
+  </div>
+</div>

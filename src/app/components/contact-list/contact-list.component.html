@@ -1,10 +1,7 @@
-<div *ngIf="selectedContact">
-{{selectedContact.name}} <span>тел: </span>{{selectedContact.phone}}
-</div>
-
 <input type="text" class="input" (keyup)="filter($event)">
 <div>
 <app-add-contact-form></app-add-contact-form>
 </div>
 <app-contact *ngFor="let contact of contacts" [contact]="contact" (remove)="updateContacts()" (click)="onSelect(contact)"></app-contact>
 <p *ngIf="contacts.length === 0">{{emptyMessage()}}</p>
+<app-contact-detail [contact]="selectedContact"></app-contact-detail>
