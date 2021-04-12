@@ -7,6 +7,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ContactComponent } from './components/contact-list/contact/contact.component';
 import { AddContactFormComponent } from './components/contact-list/add-contact-form/add-contact-form.component';
 import { ContactDetailComponent } from './components/contact-list/contact-detail/contact-detail.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ContactDetailComponent } from './components/contact-list/contact-detail
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
