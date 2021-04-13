@@ -35,6 +35,6 @@ export class ContactsService {
         this.contacts[i] = contact;
       }
     }
-    this.contacts = JSON.parse(localStorage.getItem('contacts')) || [];
+    localStorage.setItem('contacts', JSON.stringify(this.contacts));
   }
 }

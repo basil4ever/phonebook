@@ -30,5 +30,6 @@ export class ContactDetailComponent implements OnInit {
   }
   save(): void {
     this.contactsService.updateContactById(this.contact.id, this.contact);
+    this.location.back();
   }
 }
