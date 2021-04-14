@@ -33,6 +33,16 @@ export class ContactListComponent implements OnInit {
       this.isFiltered = false;
     }
   }
+  public filterByPhone(r: KeyboardEvent): void {
+    const value = (r.target as   HTMLInputElement).value.toLocaleLowerCase();
+    if (value) {
+      this.contacts = this.contacts.filter(contact => contact.phone.toLocaleLowerCase().includes(value));
+      this.isFiltered = true;
+    } else {
+      this.updateContacts();
+      this.isFiltered = false;
+    }
+  }
   public emptyMessage(): string {
     if (this.contacts.length === 0 && this.isFiltered) {
       return 'По данному фильтру контактов не найдено';

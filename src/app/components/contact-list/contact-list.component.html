@@ -1,4 +1,7 @@
-<input type="text" class="input" (keyup)="filter($event)">
+<h2>Поиск</h2>
+<span>Имя: </span><input type="text" class="input" (keyup)="filter($event)">
+<span>Тел: </span><input type="text" class="input" (keyup)="filterByPhone($event)">
+<h1></h1>
 <p *ngIf="contacts.length === 0">{{emptyMessage()}}</p>
 <div>
 <app-add-contact-form></app-add-contact-form>
